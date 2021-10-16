@@ -25,7 +25,8 @@ describe('Card', () => {
 
       // initial animation state
       expect(
-        animatedView.props.style.transform[0].translateX
+        animatedView.props.style.translateX
+        // animatedView.props.style.transform[0].translateX
       ).toBe(0.25 * 750);
       expect(
         animatedView.props.style.opacity
@@ -35,7 +36,8 @@ describe('Card', () => {
       advanceAnimationByTime(500);
 
       expect(
-        getAnimatedStyle(animatedView).transform[0].translateX
+        getAnimatedStyle(animatedView).translateX
+        // getAnimatedStyle(animatedView).transform[0].translateX
       ).toBe(112.236);
       expect(
         getAnimatedStyle(animatedView).opacity
@@ -44,8 +46,9 @@ describe('Card', () => {
       // end animation state
       advanceAnimationByTime(600);
 
-      expect(
-        getAnimatedStyle(animatedView).transform[0].translateX
+      expect(        
+        getAnimatedStyle(animatedView).translateX
+        // getAnimatedStyle(animatedView).transform[0].translateX
       ).toBe(0);
       expect(
         getAnimatedStyle(animatedView).opacity
